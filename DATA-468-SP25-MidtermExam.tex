@@ -1,0 +1,232 @@
+\documentclass[6pt]{article}
+\usepackage{ctex} 
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}    
+\usepackage{amssymb}    
+\usepackage{amsfonts}
+
+
+
+
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=10mm,
+ right=5mm,
+ }
+
+\usepackage{graphicx}
+\begin{document}
+
+\Large
+\begin{center}
+\noindent{\bf  DATA 468: Applied Stochastic Process  }\\
+\vspace{40pt}
+\bf Instructor: Dr.Zakir Ullah (zakir@arizona.edu).\\
+\vspace{40pt}
+\noindent{\bf Department of Mathematics, University of Arizona, USA}
+\end       {center}
+
+\vspace{40pt}
+\begin{center}
+
+\bf Final Exam Spring Semester, Date: 30$^{th}$ May 2025, Total marks: 100,  Duration: (13:30-15:30).
+\end{center}
+\vspace{5pt}
+%\medskip\hrule
+\vspace{20pt}
+
+\bf Instructions \\
+1. Please leave all personal belongings at the front of the classroom. Do not begin the exam until instructed to do so.\\
+2. Talking or looking at other students' exams is strictly prohibited. If you require assistance, please raise your hand and speak with the instructor.\\
+3. The use of digital devices, including phones and computers, is not allowed during the exam.\\
+4. Ensure that you attempt all questions, clearly encircle or tick your selected answer.
+
+
+\vspace{10pt}
+
+\noindent{\bf Name:----------------------------------Class-----------------------------------}\\
+\vspace{10pt}
+
+\noindent{\bf Student ID:--------------------------------------------------------------------- }\\
+\vspace{10pt}
+
+\noindent{\bf Date:----------------------------------------------------------------------------  }\\
+
+\vspace{100pt}
+\large
+
+1. Choose the right answer. (15 points)
+
+\vspace{10pt}
+
+i). In Fig \ref{fig:chain},  which ones are transient state(s)?
+
+(a)      1, 2, 5           (b)      1, 4, 7               (c)          1             (d)  None of these
+
+
+ii). In Fig \ref{fig:chain},  which ones are recurrent state(s)?
+
+(a)      2, 3, 4          (b)       5, 6, 7              (c)        All except 1            (d)  None of them
+
+iii). A random variable is a................... that maps the outcome of a random experiment into a real number.
+
+(a)   State      (b)     Function   (c)   Markov China    (d) none of these  
+
+iv). To predict the future state of a Markov chain, it is only important to know the ........ state.
+
+(a)   Future      (b)    Present   (c)   Fast    (d) none of these 
+
+v). If it is possible to go from state $i$ to state $j$, we say that state  $j$ is ................... from $i$. 
+
+(a)  Communicate     (b)  Accessible   (c) Periodic     (d) Closed
+
+\vspace{10pt}
+
+2. Mark each statement as True or False. (15 points)
+
+\vspace{10pt}
+
+i). A Markov chain is a type of stochastic chain, but not all stochastic chains are Markov.
+
+(a) True   (b) False
+
+ii). Each row of a transition matrix ($P$) should sum to $1$.
+
+(a) True   (b) False  
+
+iii). $P_{ij}^{(n)}$ represents the probability of making a transition from state $i$ to state $j$ in a single step.
+
+(a) True   (b) False 
+
+iv). A state is called transient if, starting from state $i$, there is a 100\% probability of returning to state $i$.
+
+(a) True   (b) False 
+
+v). Each state in a Markov Chain has a period. 
+
+(a) True   (b) False 
+
+\vspace{10pt}
+
+3. In radio communications, the carrier signal is often modeled as a sinusoid with a random phase. Consider the stochastic process 
+X(t)=cos(2$\pi$t + $\theta$), where the random phase shift $\theta$ has a Uniform (0, 2$\pi$) distribution. (10 points)
+
+\vspace{10pt}
+
+i). Find the mean function.
+
+ii). Find X(2).
+
+\vspace{800pt}
+
+4. A Markov chain $X_0, X_1, X_2$, . . . has the transition probability matrix (for the states \{0, 1, 2\})(30 points)
+
+\[
+   P=
+  \left[ {\begin{array}{ccc}
+   0.3 & 0.2 & 0.5\\
+   0.5 & 0.1 & 0.4\\
+   0.5 & 0.2 & 0.3\\
+  \end{array} } \right]
+\]
+
+and initial distribution: $\pi = [0.5, 0.5, 0$]. 
+\vspace{10pt}
+
+i). Draw a transition diagram of $P$
+
+ii). Find  $P(X_2 = 1 | X_1 = 0, X_0 = 2)$.
+
+iii). Find  $P(X_1 = 1)$.
+
+iv). Find  $P(X_{45} = 1 | X_{44} = 0)$.
+
+v). Find  $P(X_1 = 0)$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=14cm]{chain.png}
+  \caption{Transition Probabilities.}
+  \label{fig:chain}
+\end{figure}
+
+\vspace{1200pt}
+
+\newpage
+\thispagestyle{empty}
+~
+\newpage
+
+5. There are 3 types of weather in a particular area: \{sunny, cloudy, and rainy\}=\{1, 2, 3\}. A news Media channel wants to broadcast its prediction about next week's weather. The news channel hires a weather forecasting company to find out next week's weather. (30 points)
+
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{       } &\textbf{Sunny} & \textbf{Cloudy} & \textbf{Rainy} \\
+\midrule
+\textbf{Sunny} & 70\% & 20\% & 10\% \\
+\textbf{Cloudy} & 20\% & 50\% & 30\% \\
+\textbf{Rainy} & 50\% & 25\% & 25\% \\
+\bottomrule
+\end{tabular}
+\caption{Weather transition probabilities}
+\end{table}
+
+Note: Currently, the weather is sunny in that area.
+
+i). Write the transition matrix and draw the transition diagram for the above problem.
+
+ii). Compute the chances of different weather conditions (sunny,  cloudy, and rainy) next week.
+
+iii). What is the probability that the weather will be sunny next week?
+
+iv). What is the probability that the weather will be cloudy next week?
+
+v). What is the probability that the weather will be rainy next week?
+
+\vspace{1200pt}
+
+\newpage
+\thispagestyle{empty}
+~
+\newpage
+
+\textbf{Important Formulas}
+
+i). Uniform distribution function
+
+$f(x) = \frac{1}{b - a}$,    where  $a \leq x \leq b \\$
+
+
+
+ii) The expected value of X is given by
+
+$\mathbb{E}[g(X)] = \int_{-\infty}^{\infty} g(x) f(x) \, dx$
+
+ii) The integral of $\cos(2\pi t + \theta) $ is
+
+$\int \cos(2\pi t + \theta) \, dt = \frac{1}{2\pi} \sin(2\pi t + \theta) $
+
+
+
+\end{document}
+
+
+
+
+
+
+

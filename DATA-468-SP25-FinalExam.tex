@@ -1,0 +1,227 @@
+\documentclass[6pt]{article}
+\usepackage{ctex} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+top=10mm,
+right=5mm,
+}
+
+\usepackage{graphicx}
+\begin{document}
+
+\Large
+\begin{center}
+\noindent{\bf DATA 468: Applied Stochastic Process }\\
+\vspace{40pt}
+\bf Instructor: Dr.Zakir Ullah (zakir@arizona.edu).\\
+\vspace{40pt}
+\noindent{\bf Department of Mathematics, University of Arizona, USA}
+\end {center}
+
+\vspace{40pt}
+\begin{center}
+
+\bf Final Exam Spring Semester, Date: 30$^{th}$ May 2025, Total marks: 100, Duration: (14:00-16:00).
+\end{center}
+\vspace{5pt}
+%\medskip\hrule
+\vspace{20pt}
+
+\bf Instructions \\
+1. Please leave all personal belongings at the front of the classroom. Do not begin the exam until instructed to do so.\\
+2. Talking or looking at other students' exams is strictly prohibited. If you require assistance, please raise your hand and speak with the instructor.\\
+3. The use of digital devices, including phones and computers, is not allowed during the exam.\\
+4. Ensure that you attempt all questions, clearly encircle or tick your selected answer.
+
+
+\vspace{10pt}
+
+\noindent{\bf Name:----------------------------------Class-----------------------------------}\\
+\vspace{10pt}
+
+\noindent{\bf Student ID:--------------------------------------------------------------------- }\\
+\vspace{10pt}
+
+\noindent{\bf Date:---------------------------------------------------------------------------- }\\
+
+\vspace{100pt}
+\large
+
+1. Choose the right answer. (10 points)
+
+\vspace{10pt}
+
+i). A state is called \hspace{30pt} state if, once the chains enters the state, it remains there forever
+
+(a) null recurrent (b) limiting (c) stationary (d) absorbing
+
+ii). A \hspace{30pt} distribution doesn’t change over time under the Markov process.
+
+(a) transient (b) stationary (c) initial (d) None of them
+
+iii). A stationary distribution is a probability distribution over the states of a Markov chain such that, if the chain \hspace{30pt} in it, it will remain in it all future time steps.
+
+(a) stuck (b) starts (c) end (d) none of these 
+
+iv). The transient distribution describes the probability distribution of the states at a particular\hspace{30pt} time step.
+
+(a) Infinite (b) finite (c) one (d) none of these 
+
+v). Limiting distribution exists if a Markov chain is irreducible, positive recurrent, and\hspace{30pt}
+
+(a) periodic (b) has absorbing states (c) aperiodic (d) None of these
+
+\vspace{10pt}
+
+2. Mark each statement as True or False. (10 points)
+
+\vspace{10pt}
+
+i). A limiting distribution of the Markov chain converges as time goes to infinity, regardless of the starting distribution.
+
+(a) True (b) False
+
+ii). Each column of any transition matrix ($P$) should sum to $1$.
+
+(a) True (b) False 
+
+iii). A finite set of possible states, often represented as {1, 2, ...}. 
+
+(a) True (b) False 
+
+iv). A positive recurrent state has an infinite expected time to return.
+
+(a) True (b) False 
+
+v). For a discrete Markov Chain, the initial distribution is a probability distribution over states at time $n$=0.
+
+(a) True (b) False 
+
+\vspace{10pt}
+
+3. Draw a Transition diagram for the following matrix and identify the transient, recurrent, and absorbing states in it. (10 points)
+
+\[
+P = \begin{bmatrix}
+0.4 & 0.3 & 0.3 & 0.0 & 0.0 \\
+0.0 & 0.5 & 0.0 & 0.5 & 0.0 \\
+0.5 & 0.0 & 0.5 & 0.0 & 0.0 \\
+0.0 & 0.5 & 0.0 & 0.5 & 0.0 \\
+0.0 & 0.3 & 0.0 & 0.3 & 0.4
+\end{bmatrix}
+\]
+
+\vspace{10pt}
+
+\vspace{800pt}
+
+4. Consider a website with 3 different types of pages: $\{A: Home, B:Articles, C:PDF\}$, the Home page has a link to the Articles page and Articles page has a link back to Home page. Then the Article page has hyperlinks to published articles, clicking any of the hyperlinks opens a PDF document. When the user clicks the hyperlinks it opens the PDF version of the published article, which does not have any links to the previous pages. (30 points)
+
+\[
+P=
+\left[ {\begin{array}{ccc}
+0 & 1 & 0\\
+0.5 & 0 & 0.5\\
+0 & 0 & 1\\
+\end{array} } \right]
+\]
+
+When the user initially opens the website, page $A$ is displayed on the screen
+
+\vspace{10pt}
+
+i). Find the periods of all the states and check if the chain is periodic or aperiodic. (6)
+
+\vspace{1500pt}
+
+ii). Find the expected return time to page $A$. (6)
+
+\vspace{1500pt}
+
+iii). Find out the absorbing states of the Markov chain and calculate the absorbing probabilities.(6)
+
+\vspace{1500pt}
+
+iv). Find out if the chain is positive or null-recurrent. (6)
+
+\vspace{1500pt}
+
+v). Findout the stationary distribution if exist. (6)
+
+\vspace{1000pt}
+
+5. Suppose voter preferences for Democrat(D) party, Republican(R) party, and Independents(I) candidates shift around randomly via the transition matrix $P$. If in a previous election, party D got 48\% votes, party R got 42\% votes and party I got 10\% votes out of the total votes cast. (40 points)
+
+\begin{figure}
+\centering
+\includegraphics[width=14cm]{chain.png}
+\caption{Transition Probabilities.}
+\label{fig:chain}
+\end{figure}
+
+
+i). Predict the percentage of all the parties' votes distributed during the upcoming election. (6)
+
+\vspace{1000pt}
+
+ii). Check if the limiting distribution for the above Markov Chain exists? (10)
+
+\vspace{1000pt}
+
+iii). If the answer to (ii) is yes, then find the limiting distribution of the above Markov Chain. (8)
+
+\vspace{1000pt}
+
+iv). Does a limiting distribution mean voters stopped switching parties or the overall proportions of voters are stabilized after many election cycles? (6)
+
+\vspace{1000pt}
+
+v). Check if the chain is ergodic? (10)
+
+
+\vspace{1000pt}
+
+
+\textbf{Important Formulas}
+
+i). Absorption probabilities
+
+lets $a_i$=P(absorption in a $\mid$ $X_0$=i), where i $\in S$
+
+\[
+a_{i} = \sum_{k \in S} a_{k} \cdot P_{ik}
+\]
+ii) Mean hitting time
+
+\[
+h_{ki} = 1+\sum_{k \in S} P_{kj} \cdot h_{ji}, k \ne i
+\]
+
+ii) Mean return time 
+
+\[
+r_{i} = 1+\sum_{k \in S} P_{ik} \cdot h_{ki}
+\]
+
+\end{document}
+
+
+
+
+
+
+
+
